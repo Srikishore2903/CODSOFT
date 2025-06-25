@@ -36,3 +36,9 @@ plt.ylabel("Predicted Sales")
 plt.title("Actual vs Predicted Sales")
 plt.grid(True)
 plt.show()
+corr = data.corr()
+
+# Plot heatmap
+sns.heatmap(corr, annot=True, cmap='coolwarm', fmt=".2f")
+plt.title('Correlation Heatmap')
+plt.show()
